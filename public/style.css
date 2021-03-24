@@ -352,8 +352,9 @@ img {
   margin-top: 10px;
   padding: 0 30px;
 }
+*/
 
-.mu-top-slider .slick-prev::before {
+/* .mu-top-slider .slick-prev::before {
   content: '\f177';
   font-family: fontAwesome;
 }
@@ -608,6 +609,7 @@ img {
   width: 100%;
   text-align: center;
   border: none;
+  cursor: pointer;
 }
 
 .mu-restaurant-menu li {
@@ -1122,7 +1124,6 @@ RESERVATION SECTION
 /*==================
   CHEF SECTION
 ====================*/
-
 #mu-chef {
   display: inline;
   float: left;
@@ -1151,7 +1152,7 @@ RESERVATION SECTION
   width: 100%;
 }
 
-.mu-chef-nav .slick-list li {
+.mu-chef-nav .slick-list .mu-single-chef-parent {
   background-color: #f8f8f8;
   display: inline-block;
   margin: 0 5px;
@@ -1159,53 +1160,84 @@ RESERVATION SECTION
   overflow: hidden;
 }
 
-.mu-chef-nav .slick-list li:first-child {
+.mu-chef-nav .slick-list .mu-single-chef-parent:first-child {
   margin-left: 0;
 }
 
-.mu-chef-nav .slick-list li:last-child {
+.mu-chef-nav .slick-list .mu-single-chef-parent:last-child {
   margin-right: 0;
 }
 
-.mu-chef-nav .slick-list li .mu-single-chef {
+.mu-chef-nav .slick-list .mu-single-chef-parent .mu-single-chef {
   display: inline;
   float: left;
   width: 100%;
   position: relative;
 }
 
-.mu-chef-nav .slick-list li .mu-single-chef:hover .mu-single-chef-social {
+.mu-chef-nav
+  .slick-list
+  .mu-single-chef-parent
+  .mu-single-chef:hover
+  .mu-single-chef-social {
   bottom: 0;
   opacity: 1;
 }
 
-.mu-chef-nav .slick-list li .mu-single-chef .mu-single-chef-img {
+.mu-chef-nav
+  .slick-list
+  .mu-single-chef-parent
+  .mu-single-chef
+  .mu-single-chef-img {
   display: inline;
   float: left;
   width: 100%;
 }
 
-.mu-chef-nav .slick-list li .mu-single-chef .mu-single-chef-img img {
+.mu-chef-nav
+  .slick-list
+  .mu-single-chef-parent
+  .mu-single-chef
+  .mu-single-chef-img
+  img {
   width: 100%;
 }
 
-.mu-chef-nav .slick-list li .mu-single-chef .mu-single-chef-info {
+.mu-chef-nav
+  .slick-list
+  .mu-single-chef-parent
+  .mu-single-chef
+  .mu-single-chef-info {
   display: inline;
   float: left;
   padding: 10px 10px 20px;
   width: 100%;
 }
 
-.mu-chef-nav .slick-list li .mu-single-chef .mu-single-chef-info h4 {
+.mu-chef-nav
+  .slick-list
+  .mu-single-chef-parent
+  .mu-single-chef
+  .mu-single-chef-info
+  h4 {
   margin-bottom: 5px;
 }
 
-.mu-chef-nav .slick-list li .mu-single-chef .mu-single-chef-info span {
+.mu-chef-nav
+  .slick-list
+  .mu-single-chef-parent
+  .mu-single-chef
+  .mu-single-chef-info
+  span {
   font-size: 14px;
   letter-spacing: 0.5px;
 }
 
-.mu-chef-nav .slick-list li .mu-single-chef .mu-single-chef-social {
+.mu-chef-nav
+  .slick-list
+  .mu-single-chef-parent
+  .mu-single-chef
+  .mu-single-chef-social {
   background-color: #000;
   position: absolute;
   bottom: -100%;
@@ -1221,7 +1253,12 @@ RESERVATION SECTION
   transition: all 0.5s;
 }
 
-.mu-chef-nav .slick-list li .mu-single-chef .mu-single-chef-social a {
+.mu-chef-nav
+  .slick-list
+  .mu-single-chef-parent
+  .mu-single-chef
+  .mu-single-chef-social
+  a {
   display: inline-block;
   margin: 0 5px;
   padding: 5px;
@@ -1234,8 +1271,18 @@ RESERVATION SECTION
   transition: all 0.5s;
 }
 
-.mu-chef-nav .slick-list li .mu-single-chef .mu-single-chef-social a:hover,
-.mu-chef-nav .slick-list li .mu-single-chef .mu-single-chef-social a:focus {
+.mu-chef-nav
+  .slick-list
+  .mu-single-chef-parent
+  .mu-single-chef
+  .mu-single-chef-social
+  a:hover,
+.mu-chef-nav
+  .slick-list
+  .mu-single-chef-parent
+  .mu-single-chef
+  .mu-single-chef-social
+  a:focus {
   color: #fff;
 }
 
@@ -1268,7 +1315,7 @@ RESERVATION SECTION
   background-color: #f8f8f8;
   display: inline;
   float: left;
-  padding: 100px 0;
+  padding: 10px 0;
   width: 100%;
 }
 
@@ -1405,7 +1452,7 @@ RESERVATION SECTION
 #mu-map {
   display: inline;
   float: left;
-  height: 450px;
+  height: 650px;
   width: 100%;
 }
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import Layout from '../components/layout'
 import Slider from 'react-slick'
 import Zurag from '../components/Zurag'
 
@@ -14,27 +15,6 @@ const settings = {
   cssEase: 'linear',
 }
 
-const settingsChef = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 2,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  responsive: [
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true,
-      },
-    },
-  ],
-}
-
 export default function Home() {
   const [active, setActive] = React.useState(0)
 
@@ -43,7 +23,7 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <Layout>
       {/* <!-- Start slider  --> */}
       <section id="mu-slider">
         <div className="mu-slider-area">
@@ -231,7 +211,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <!-- End Counter Section -->
+      {/* <!-- End Counter Section --> 
 
   <!-- Start Restaurant Menu --> */}
       <section id="mu-restaurant-menu">
@@ -249,215 +229,223 @@ export default function Home() {
                     <li
                       className={active === 0 ? 'active' : ''}
                       onClick={() => onClick(0)}>
-                      <a data-toggle="tab">Breakfast</a>
+                      <a href="#breakfast" data-toggle="tab">
+                        Breakfast
+                      </a>
                     </li>
                     <li
                       className={active === 1 ? 'active' : ''}
                       onClick={() => onClick(1)}>
-                      <a data-toggle="tab">Meals</a>
+                      <a href="#meals" data-toggle="tab">
+                        Meals
+                      </a>
                     </li>
                     <li
                       className={active === 2 ? 'active' : ''}
                       onClick={() => onClick(2)}>
-                      <a data-toggle="tab">Snacks</a>
+                      <a href="#snacks" data-toggle="tab">
+                        Snacks
+                      </a>
                     </li>
                     <li
                       className={active === 3 ? 'active' : ''}
                       onClick={() => onClick(3)}>
-                      <a data-toggle="tab">Desserts</a>
+                      <a href="#desserts" data-toggle="tab">
+                        Desserts
+                      </a>
                     </li>
                     <li
                       className={active === 4 ? 'active' : ''}
                       onClick={() => onClick(4)}>
-                      <a data-toggle="tab">Drinks</a>
+                      <a href="#drinks" data-toggle="tab">
+                        Drinks
+                      </a>
                     </li>
                   </ul>
 
                   {/* <!-- Tab panes --> */}
                   <div className="tab-content">
-                    {active === 0 && (
-                      <div className="tab-pane fade in active" id="breakfast">
-                        <div className="mu-tab-content-area">
-                          <div className="row">
-                            <div className="col-md-6">
-                              <div className="mu-tab-content-left">
-                                <ul className="mu-menu-item-nav">
-                                  <li>
-                                    <div className="media">
-                                      <div className="media-left">
-                                        <a href="#">
-                                          <img
-                                            className="media-object"
-                                            src="/assets/img/menu/item-1.jpg"
-                                            alt="img"
-                                          />
-                                        </a>
-                                      </div>
-                                      <div className="media-body">
-                                        <h4 className="media-heading">
-                                          <a href="#">English BreakfastAcce</a>
-                                        </h4>
-                                        <span className="mu-menu-price">
-                                          $15.85
-                                        </span>
-                                        <p>
-                                          Lorem ipsum dolor sit amet,
-                                          consectetur adipisicing elit. Facere
-                                          nulla aliquid praesentium dolorem
-                                          commodi illo.
-                                        </p>
-                                      </div>
+                    <div
+                      className={
+                        active === 0
+                          ? 'tab-pane fade in active'
+                          : 'tab-pane fade'
+                      }
+                      id="breakfast">
+                      <div className="mu-tab-content-area">
+                        <div className="row">
+                          <div className="col-md-6">
+                            <div className="mu-tab-content-left">
+                              <ul className="mu-menu-item-nav">
+                                <li>
+                                  <div className="media">
+                                    <div className="media-left">
+                                      <a href="#">
+                                        <img
+                                          className="media-object"
+                                          src="/assets/img/menu/item-1.jpg"
+                                          alt="img"
+                                        />
+                                      </a>
                                     </div>
-                                  </li>
-                                  <li>
-                                    <div className="media">
-                                      <div className="media-left">
-                                        <a href="#">
-                                          <img
-                                            className="media-object"
-                                            src="/assets/img/menu/item-2.jpg"
-                                            alt="img"
-                                          />
-                                        </a>
-                                      </div>
-                                      <div className="media-body">
-                                        <h4 className="media-heading">
-                                          <a href="#">Chines Breakfast</a>
-                                        </h4>
-                                        <span className="mu-menu-price">
-                                          $11.95
-                                        </span>
-                                        <p>
-                                          Lorem ipsum dolor sit amet,
-                                          consectetur adipisicing elit. Facere
-                                          nulla aliquid praesentium dolorem
-                                          commodi illo.
-                                        </p>
-                                      </div>
+                                    <div className="media-body">
+                                      <h4 className="media-heading">
+                                        <a href="#">English Breakfast</a>
+                                      </h4>
+                                      <span className="mu-menu-price">
+                                        $15.85
+                                      </span>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Facere nulla aliquid
+                                        praesentium dolorem commodi illo.
+                                      </p>
                                     </div>
-                                  </li>
-                                  <li>
-                                    <div className="media">
-                                      <div className="media-left">
-                                        <a href="#">
-                                          <img
-                                            className="media-object"
-                                            src="/assets/img/menu/item-1.jpg"
-                                            alt="img"
-                                          />
-                                        </a>
-                                      </div>
-                                      <div className="media-body">
-                                        <h4 className="media-heading">
-                                          <a href="#">Indian Breakfast</a>
-                                        </h4>
-                                        <span className="mu-menu-price">
-                                          $15.85
-                                        </span>
-                                        <p>
-                                          Lorem ipsum dolor sit amet,
-                                          consectetur adipisicing elit. Facere
-                                          nulla aliquid praesentium dolorem
-                                          commodi illo.
-                                        </p>
-                                      </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="media">
+                                    <div className="media-left">
+                                      <a href="#">
+                                        <img
+                                          className="media-object"
+                                          src="/assets/img/menu/item-2.jpg"
+                                          alt="img"
+                                        />
+                                      </a>
                                     </div>
-                                  </li>
-                                </ul>
-                              </div>
+                                    <div className="media-body">
+                                      <h4 className="media-heading">
+                                        <a href="#">Chines Breakfast</a>
+                                      </h4>
+                                      <span className="mu-menu-price">
+                                        $11.95
+                                      </span>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Facere nulla aliquid
+                                        praesentium dolorem commodi illo.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="media">
+                                    <div className="media-left">
+                                      <a href="#">
+                                        <img
+                                          className="media-object"
+                                          src="/assets/img/menu/item-1.jpg"
+                                          alt="img"
+                                        />
+                                      </a>
+                                    </div>
+                                    <div className="media-body">
+                                      <h4 className="media-heading">
+                                        <a href="#">Indian Breakfast</a>
+                                      </h4>
+                                      <span className="mu-menu-price">
+                                        $15.85
+                                      </span>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Facere nulla aliquid
+                                        praesentium dolorem commodi illo.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
                             </div>
+                          </div>
 
-                            <div className="col-md-6">
-                              <div className="mu-tab-content-right">
-                                <ul className="mu-menu-item-nav">
-                                  <li>
-                                    <div className="media">
-                                      <div className="media-left">
-                                        <a href="#">
-                                          <img
-                                            className="media-object"
-                                            src="/assets/img/menu/item-1.jpg"
-                                            alt="img"
-                                          />
-                                        </a>
-                                      </div>
-                                      <div className="media-body">
-                                        <h4 className="media-heading">
-                                          <a href="#">English Breakfast</a>
-                                        </h4>
-                                        <span className="mu-menu-price">
-                                          $15.85
-                                        </span>
-                                        <p>
-                                          Lorem ipsum dolor sit amet,
-                                          consectetur adipisicing elit. Facere
-                                          nulla aliquid praesentium dolorem
-                                          commodi illo.
-                                        </p>
-                                      </div>
+                          <div className="col-md-6">
+                            <div className="mu-tab-content-right">
+                              <ul className="mu-menu-item-nav">
+                                <li>
+                                  <div className="media">
+                                    <div className="media-left">
+                                      <a href="#">
+                                        <img
+                                          className="media-object"
+                                          src="/assets/img/menu/item-1.jpg"
+                                          alt="img"
+                                        />
+                                      </a>
                                     </div>
-                                  </li>
-                                  <li>
-                                    <div className="media">
-                                      <div className="media-left">
-                                        <a href="#">
-                                          <img
-                                            className="media-object"
-                                            src="/assets/img/menu/item-2.jpg"
-                                            alt="img"
-                                          />
-                                        </a>
-                                      </div>
-                                      <div className="media-body">
-                                        <h4 className="media-heading">
-                                          <a href="#">Chines Breakfast</a>
-                                        </h4>
-                                        <span className="mu-menu-price">
-                                          $11.95
-                                        </span>
-                                        <p>
-                                          Lorem ipsum dolor sit amet,
-                                          consectetur adipisicing elit. Facere
-                                          nulla aliquid praesentium dolorem
-                                          commodi illo.
-                                        </p>
-                                      </div>
+                                    <div className="media-body">
+                                      <h4 className="media-heading">
+                                        <a href="#">English Breakfast</a>
+                                      </h4>
+                                      <span className="mu-menu-price">
+                                        $15.85
+                                      </span>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Facere nulla aliquid
+                                        praesentium dolorem commodi illo.
+                                      </p>
                                     </div>
-                                  </li>
-                                  <li>
-                                    <div className="media">
-                                      <div className="media-left">
-                                        <a href="#">
-                                          <img
-                                            className="media-object"
-                                            src="/assets/img/menu/item-1.jpg"
-                                            alt="img"
-                                          />
-                                        </a>
-                                      </div>
-                                      <div className="media-body">
-                                        <h4 className="media-heading">
-                                          <a href="#">Indian Breakfast</a>
-                                        </h4>
-                                        <span className="mu-menu-price">
-                                          $15.85
-                                        </span>
-                                        <p>
-                                          Lorem ipsum dolor sit amet,
-                                          consectetur adipisicing elit. Facere
-                                          nulla aliquid praesentium dolorem
-                                          commodi illo.
-                                        </p>
-                                      </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="media">
+                                    <div className="media-left">
+                                      <a href="#">
+                                        <img
+                                          className="media-object"
+                                          src="/assets/img/menu/item-2.jpg"
+                                          alt="img"
+                                        />
+                                      </a>
                                     </div>
-                                  </li>
-                                </ul>
-                              </div>
+                                    <div className="media-body">
+                                      <h4 className="media-heading">
+                                        <a href="#">Chines Breakfast</a>
+                                      </h4>
+                                      <span className="mu-menu-price">
+                                        $11.95
+                                      </span>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Facere nulla aliquid
+                                        praesentium dolorem commodi illo.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div className="media">
+                                    <div className="media-left">
+                                      <a href="#">
+                                        <img
+                                          className="media-object"
+                                          src="/assets/img/menu/item-1.jpg"
+                                          alt="img"
+                                        />
+                                      </a>
+                                    </div>
+                                    <div className="media-body">
+                                      <h4 className="media-heading">
+                                        <a href="#">Indian Breakfast</a>
+                                      </h4>
+                                      <span className="mu-menu-price">
+                                        $15.85
+                                      </span>
+                                      <p>
+                                        Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Facere nulla aliquid
+                                        praesentium dolorem commodi illo.
+                                      </p>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
                       </div>
-                    )}
+                    </div>
 
                     <div
                       className={
@@ -484,10 +472,12 @@ export default function Home() {
                                     </div>
                                     <div className="media-body">
                                       <h4 className="media-heading">
-                                        <a href="#">Page 2 menu snacks</a>
+                                        <a href="#">
+                                          English Breakfast GOGO 123
+                                        </a>
                                       </h4>
                                       <span className="mu-menu-price">
-                                        $15.85-Page2
+                                        $15.85
                                       </span>
                                       <p>
                                         Lorem ipsum dolor sit amet, consectetur
@@ -1439,7 +1429,7 @@ export default function Home() {
                         </figure>
                       </div>
                     </div>
-                    {/* <!-- End single gallery image -->
+                    {/* <!-- End single gallery image -->  
 
                 <!-- start single gallery image --> */}
                     <div className="mu-single-gallery col-md-4">
@@ -1532,7 +1522,7 @@ export default function Home() {
         </div>
       </section>
       {/* <!-- End Gallery -->
-
+  
   <!-- Start Client Testimonial section --> */}
       <section id="mu-client-testimonial">
         <div className="mu-overlay">
@@ -1548,8 +1538,8 @@ export default function Home() {
                   {/* <!-- testimonial content --> */}
                   <div className="mu-testimonial-content">
                     {/* <!-- testimonial slider --> */}
-                    <div className="mu-testimonial-slider">
-                      <Slider {...settings}>
+                    <ul className="mu-testimonial-slider">
+                      <li>
                         <div className="mu-testimonial-single">
                           <div className="mu-testimonial-info">
                             <p>
@@ -1565,10 +1555,12 @@ export default function Home() {
                             <p>- David Muller</p>
                           </div>
                         </div>
+                      </li>
+                      <li>
                         <div className="mu-testimonial-single">
                           <div className="mu-testimonial-info">
                             <p>
-                              2Lorem ipsum dolor sit amet, consectetur
+                              Lorem ipsum dolor sit amet, consectetur
                               adipisicing elit. Cupiditate consequuntur ducimus
                               cumque iure modi nesciunt recusandae eligendi
                               vitae voluptatibus, voluptatum tempore, ipsum nisi
@@ -1580,10 +1572,12 @@ export default function Home() {
                             <p>- David Muller</p>
                           </div>
                         </div>
+                      </li>
+                      <li>
                         <div className="mu-testimonial-single">
                           <div className="mu-testimonial-info">
                             <p>
-                              3Lorem ipsum dolor sit amet, consectetur
+                              Lorem ipsum dolor sit amet, consectetur
                               adipisicing elit. Cupiditate consequuntur ducimus
                               cumque iure modi nesciunt recusandae eligendi
                               vitae voluptatibus, voluptatum tempore, ipsum nisi
@@ -1595,8 +1589,8 @@ export default function Home() {
                             <p>- David Muller</p>
                           </div>
                         </div>
-                      </Slider>
-                    </div>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1605,7 +1599,7 @@ export default function Home() {
         </div>
       </section>
       {/* <!-- End Client Testimonial section -->
-
+  
   <!-- Start Chef Section --> */}
       <section id="mu-chef">
         <div className="container">
@@ -1618,238 +1612,239 @@ export default function Home() {
                 </div>
 
                 <div className="mu-chef-content">
-                  <div className="mu-chef-nav">
-                    <Slider {...settingsChef}>
-                      <div className="mu-single-chef-parent">
-                        <div className="mu-single-chef">
-                          <figure className="mu-single-chef-img">
-                            <img
-                              src="/assets/img/chef/chef-1.jpg"
-                              alt="chef img"
-                            />
-                          </figure>
-                          <div className="mu-single-chef-info">
-                            <h4>Simon Jonson</h4>
-                            <span>Head Chef</span>
-                          </div>
-                          <div className="mu-single-chef-social">
-                            <a href="#">
-                              <i className="fa fa-facebook"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-google-plus"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-linkedin"></i>
-                            </a>
-                          </div>
+                  <ul className="mu-chef-nav">
+                    <li>
+                      <div className="mu-single-chef">
+                        <figure className="mu-single-chef-img">
+                          <img
+                            src="/assets/img/chef/chef-1.jpg"
+                            alt="chef img"
+                          />
+                        </figure>
+                        <div className="mu-single-chef-info">
+                          <h4>Simon Jonson</h4>
+                          <span>Head Chef</span>
+                        </div>
+                        <div className="mu-single-chef-social">
+                          <a href="#">
+                            <i className="fa fa-facebook"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-twitter"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-google-plus"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-linkedin"></i>
+                          </a>
                         </div>
                       </div>
-                      <div className="mu-single-chef-parent">
-                        <div className="mu-single-chef">
-                          <figure className="mu-single-chef-img">
-                            <img
-                              src="/assets/img/chef/chef-2.jpg"
-                              alt="chef img"
-                            />
-                          </figure>
-                          <div className="mu-single-chef-info">
-                            <h4>Kelly Wenzel</h4>
-                            <span>Pizza Chef</span>
-                          </div>
-                          <div className="mu-single-chef-social">
-                            <a href="#">
-                              <i className="fa fa-facebook"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-google-plus"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-linkedin"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="mu-single-chef-parent">
-                        <div className="mu-single-chef">
-                          <figure className="mu-single-chef-img">
-                            <img
-                              src="/assets/img/chef/chef-3.jpg"
-                              alt="chef img"
-                            />
-                          </figure>
-                          <div className="mu-single-chef-info">
-                            <h4>Greg Hong</h4>
-                            <span>Grill Chef</span>
-                          </div>
-                          <div className="mu-single-chef-social">
-                            <a href="#">
-                              <i className="fa fa-facebook"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-google-plus"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-linkedin"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
+                    </li>
 
-                      <div className="mu-single-chef-parent">
-                        <div className="mu-single-chef">
-                          <figure className="mu-single-chef-img">
-                            <img
-                              src="/assets/img/chef/chef-4.jpg"
-                              alt="chef img"
-                            />
-                          </figure>
-                          <div className="mu-single-chef-info">
-                            <h4>Marty Fukuda</h4>
-                            <span>Burger Chef</span>
-                          </div>
-                          <div className="mu-single-chef-social">
-                            <a href="#">
-                              <i className="fa fa-facebook"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-google-plus"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-linkedin"></i>
-                            </a>
-                          </div>
+                    <li>
+                      <div className="mu-single-chef">
+                        <figure className="mu-single-chef-img">
+                          <img
+                            src="/assets/img/chef/chef-2.jpg"
+                            alt="chef img"
+                          />
+                        </figure>
+                        <div className="mu-single-chef-info">
+                          <h4>Kelly Wenzel</h4>
+                          <span>Pizza Chef</span>
+                        </div>
+                        <div className="mu-single-chef-social">
+                          <a href="#">
+                            <i className="fa fa-facebook"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-twitter"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-google-plus"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-linkedin"></i>
+                          </a>
                         </div>
                       </div>
+                    </li>
 
-                      <div className="mu-single-chef-parent">
-                        <div className="mu-single-chef">
-                          <figure className="mu-single-chef-img">
-                            <img
-                              src="/assets/img/chef/chef-5.jpg"
-                              alt="chef img"
-                            />
-                          </figure>
-                          <div className="mu-single-chef-info">
-                            <h4>Simon Jonson</h4>
-                            <span>Head Chef</span>
-                          </div>
-                          <div className="mu-single-chef-social">
-                            <a href="#">
-                              <i className="fa fa-facebook"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-google-plus"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-linkedin"></i>
-                            </a>
-                          </div>
+                    <li>
+                      <div className="mu-single-chef">
+                        <figure className="mu-single-chef-img">
+                          <img
+                            src="/assets/img/chef/chef-3.jpg"
+                            alt="chef img"
+                          />
+                        </figure>
+                        <div className="mu-single-chef-info">
+                          <h4>Greg Hong</h4>
+                          <span>Grill Chef</span>
+                        </div>
+                        <div className="mu-single-chef-social">
+                          <a href="#">
+                            <i className="fa fa-facebook"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-twitter"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-google-plus"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-linkedin"></i>
+                          </a>
                         </div>
                       </div>
-                      <div className="mu-single-chef-parent">
-                        <div className="mu-single-chef">
-                          <figure className="mu-single-chef-img">
-                            <img
-                              src="/assets/img/chef/chef-1.jpg"
-                              alt="chef img"
-                            />
-                          </figure>
-                          <div className="mu-single-chef-info">
-                            <h4>Kelly Wenzel</h4>
-                            <span>Pizza Chef</span>
-                          </div>
-                          <div className="mu-single-chef-social">
-                            <a href="#">
-                              <i className="fa fa-facebook"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-google-plus"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-linkedin"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
+                    </li>
 
-                      <div className="mu-single-chef-parent">
-                        <div className="mu-single-chef">
-                          <figure className="mu-single-chef-img">
-                            <img
-                              src="/assets/img/chef/chef-2.jpg"
-                              alt="chef img"
-                            />
-                          </figure>
-                          <div className="mu-single-chef-info">
-                            <h4>Greg Hong</h4>
-                            <span>Grill Chef</span>
-                          </div>
-                          <div className="mu-single-chef-social">
-                            <a href="#">
-                              <i className="fa fa-facebook"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-google-plus"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-linkedin"></i>
-                            </a>
-                          </div>
+                    <li>
+                      <div className="mu-single-chef">
+                        <figure className="mu-single-chef-img">
+                          <img
+                            src="/assets/img/chef/chef-4.jpg"
+                            alt="chef img"
+                          />
+                        </figure>
+                        <div className="mu-single-chef-info">
+                          <h4>Marty Fukuda</h4>
+                          <span>Burger Chef</span>
+                        </div>
+                        <div className="mu-single-chef-social">
+                          <a href="#">
+                            <i className="fa fa-facebook"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-twitter"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-google-plus"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-linkedin"></i>
+                          </a>
                         </div>
                       </div>
+                    </li>
 
-                      <div className="mu-single-chef-parent">
-                        <div className="mu-single-chef">
-                          <figure className="mu-single-chef-img">
-                            <img
-                              src="/assets/img/chef/chef-3.jpg"
-                              alt="chef img"
-                            />
-                          </figure>
-                          <div className="mu-single-chef-info">
-                            <h4>Marty Fukuda</h4>
-                            <span>Burger Chef</span>
-                          </div>
-                          <div className="mu-single-chef-social">
-                            <a href="#">
-                              <i className="fa fa-facebook"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-google-plus"></i>
-                            </a>
-                            <a href="#">
-                              <i className="fa fa-linkedin"></i>
-                            </a>
-                          </div>
+                    <li>
+                      <div className="mu-single-chef">
+                        <figure className="mu-single-chef-img">
+                          <img
+                            src="/assets/img/chef/chef-5.jpg"
+                            alt="chef img"
+                          />
+                        </figure>
+                        <div className="mu-single-chef-info">
+                          <h4>Simon Jonson</h4>
+                          <span>Head Chef</span>
+                        </div>
+                        <div className="mu-single-chef-social">
+                          <a href="#">
+                            <i className="fa fa-facebook"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-twitter"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-google-plus"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-linkedin"></i>
+                          </a>
                         </div>
                       </div>
-                    </Slider>
-                  </div>
+                    </li>
+
+                    <li>
+                      <div className="mu-single-chef">
+                        <figure className="mu-single-chef-img">
+                          <img
+                            src="/assets/img/chef/chef-1.jpg"
+                            alt="chef img"
+                          />
+                        </figure>
+                        <div className="mu-single-chef-info">
+                          <h4>Kelly Wenzel</h4>
+                          <span>Pizza Chef</span>
+                        </div>
+                        <div className="mu-single-chef-social">
+                          <a href="#">
+                            <i className="fa fa-facebook"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-twitter"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-google-plus"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-linkedin"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div className="mu-single-chef">
+                        <figure className="mu-single-chef-img">
+                          <img
+                            src="/assets/img/chef/chef-2.jpg"
+                            alt="chef img"
+                          />
+                        </figure>
+                        <div className="mu-single-chef-info">
+                          <h4>Greg Hong</h4>
+                          <span>Grill Chef</span>
+                        </div>
+                        <div className="mu-single-chef-social">
+                          <a href="#">
+                            <i className="fa fa-facebook"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-twitter"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-google-plus"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-linkedin"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div className="mu-single-chef">
+                        <figure className="mu-single-chef-img">
+                          <img
+                            src="/assets/img/chef/chef-3.jpg"
+                            alt="chef img"
+                          />
+                        </figure>
+                        <div className="mu-single-chef-info">
+                          <h4>Marty Fukuda</h4>
+                          <span>Burger Chef</span>
+                        </div>
+                        <div className="mu-single-chef-social">
+                          <a href="#">
+                            <i className="fa fa-facebook"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-twitter"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-google-plus"></i>
+                          </a>
+                          <a href="#">
+                            <i className="fa fa-linkedin"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -1858,7 +1853,7 @@ export default function Home() {
       </section>
       {/* <!-- End Chef Section -->
 
-
+ 
 
   <!-- Start Contact section --> */}
       <section id="mu-contact">
@@ -1984,16 +1979,15 @@ export default function Home() {
       {/* <!-- End Contact section --> */}
 
       {/* <!-- Start Map section --> */}
-
       <section id="mu-map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d897.797333596063!2d15.599267859892706!3d56.182095188070456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ssv!2sse!4v1616605017498!5m2!1ssv!2sse"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9207.358598888495!2d-85.64847801496286!3d30.183918972289003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x2320479d70eb6202!2sDillard&#39;s!5e0!3m2!1sbn!2sbd!4v1462359735720"
           width="100%"
           height="100%"
           frameBorder="0"
           allowFullScreen></iframe>
       </section>
       {/* <!-- End Map section --> */}
-    </div>
+    </Layout>
   )
 }
