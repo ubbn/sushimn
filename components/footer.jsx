@@ -28,7 +28,7 @@ export default function Footer() {
                 <p>
                   &copy; Copyright{' '}
                   <a rel="nofollow" href="http://markups.io">
-                    markups.io
+                    SushiMN AB
                   </a>
                   . All right reserved.
                 </p>
