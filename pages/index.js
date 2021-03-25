@@ -23,6 +23,18 @@ const settings = {
   cssEase: 'linear',
   arrows: false,
 }
+const settingsTest = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  cssEase: 'linear',
+  arrows: false,
+}
 
 export default function Home() {
   return (
@@ -34,7 +46,7 @@ export default function Home() {
       <Menu />
       <Reservation />
       <Gallery />
-      <Testimonial settings={settings} />
+      <Testimonial settings={settingsTest} />
       <Chefs />
       <Contacts />
       <Map />

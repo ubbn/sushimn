@@ -1131,12 +1131,9 @@ RESERVATION SECTION
   transition: all 0.5s;
 }
 
-.mu-testimonial-slider .slick-dots li button {
+/* .mu-testimonial-slider .slick-dots li button {
   display: none;
-}
-.mu-testimonial-slider .slick-dots {
-  text-align: center;
-}
+} */
 
 /*==================
   CHEF SECTION
