@@ -403,7 +403,7 @@ img {
 
 .mu-top-slider .slick-next {
   right: 20px;
-}
+} */
 
 .mu-top-slider .slick-dots {
   bottom: 20px;
@@ -426,7 +426,7 @@ img {
   color: transparent;
   border-radius: 50%;
   opacity: 1;
-} */
+}
 
 /*==================
 	ABOUT US SECTION
@@ -1033,13 +1033,13 @@ RESERVATION SECTION
   width: 100%;
 }
 
-.mu-testimonial-slider li {
+.mu-testimonial-slider .slick-slide {
   display: inline;
   float: left;
   width: 100%;
 }
 
-.mu-testimonial-slider li .mu-testimonial-single {
+.mu-testimonial-slider .slick-slide .mu-testimonial-single {
   display: inline;
   float: left;
   padding: 0 150px;
@@ -1047,14 +1047,21 @@ RESERVATION SECTION
   width: 100%;
 }
 
-.mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info {
+.mu-testimonial-slider
+  .slick-slide
+  .mu-testimonial-single
+  .mu-testimonial-info {
   display: inline;
   float: left;
   width: 100%;
   text-align: center;
 }
 
-.mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info p {
+.mu-testimonial-slider
+  .slick-slide
+  .mu-testimonial-single
+  .mu-testimonial-info
+  p {
   color: #fff;
   font-size: 20px;
   letter-spacing: 0.5px;
@@ -1065,7 +1072,11 @@ RESERVATION SECTION
   z-index: 20;
 }
 
-.mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-info p:before {
+.mu-testimonial-slider
+  .slick-slide
+  .mu-testimonial-single
+  .mu-testimonial-info
+  p:before {
   content: '\f10e';
   font-family: fontAwesome;
   font-size: 50px;
@@ -1078,7 +1089,7 @@ RESERVATION SECTION
   z-index: -10;
 }
 
-.mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-bio {
+.mu-testimonial-slider .slick-slide .mu-testimonial-single .mu-testimonial-bio {
   color: #fff;
   display: inline-block;
   float: left;
@@ -1090,7 +1101,11 @@ RESERVATION SECTION
   z-index: 30;
 }
 
-.mu-testimonial-slider li .mu-testimonial-single .mu-testimonial-bio p {
+.mu-testimonial-slider
+  .slick-slide
+  .mu-testimonial-single
+  .mu-testimonial-bio
+  p {
   display: inline-block;
   font-size: 18px;
   font-weight: bold;
@@ -1104,7 +1119,6 @@ RESERVATION SECTION
 .mu-testimonial-slider .slick-dots {
   text-align: center;
 }
-
 .mu-testimonial-slider .slick-dots li {
   border-radius: 50%;
   width: 20px;
@@ -1119,6 +1133,9 @@ RESERVATION SECTION
 
 .mu-testimonial-slider .slick-dots li button {
   display: none;
+}
+.mu-testimonial-slider .slick-dots {
+  text-align: center;
 }
 
 /*==================
@@ -1540,17 +1557,17 @@ RESERVATION SECTION
     right: 5%;
   }
 
-  .mu-top-slider
+  /* .mu-top-slider
     .mu-top-slider-single
     .mu-top-slider-content
     .mu-slider-small-title {
     font-size: 80px;
-  }
+  } */
 
-  .mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-title {
+  /* .mu-top-slider .mu-top-slider-single .mu-top-slider-content .mu-slider-title {
     font-size: 55px;
     line-height: 70px;
-  }
+  } */
 
   .mu-reservation-content {
     padding: 0;
@@ -1576,9 +1593,9 @@ RESERVATION SECTION
     font-size: 14px;
   }
 
-  .mu-top-slider-content .mu-reservation-btn {
+  /* .mu-top-slider-content .mu-reservation-btn {
     display: none;
-  }
+  } */
 
   .mu-about-us-left,
   .mu-reservation-form {
@@ -1672,9 +1689,9 @@ RESERVATION SECTION
     line-height: 75px;
   }
 
-  .mu-top-slider .mu-top-slider-single .mu-top-slider-content {
+  /* .mu-top-slider .mu-top-slider-single .mu-top-slider-content {
     top: 18%;
-  }
+  } */
 
   #mu-restaurant-menu
     .mu-restaurant-menu-area
@@ -1728,22 +1745,22 @@ RESERVATION SECTION
     display: none !important;
   }
 
-  .mu-top-slider
+  /* .mu-top-slider
     .mu-top-slider-single
     .mu-top-slider-content
     .mu-slider-small-title {
     font-size: 45px;
     line-height: 35px;
-  }
+  } */
 
-  .mu-top-slider .mu-top-slider-single .mu-top-slider-content p {
+  /* .mu-top-slider .mu-top-slider-single .mu-top-slider-content p {
     font-size: 14px;
     margin-bottom: 0;
     margin-top: 0px;
     padding: 0 5px;
-  }
+  } */
 
-  #mu-slider
+  /* #mu-slider
     .mu-slider-area
     .mu-top-slider
     .mu-top-slider-single
@@ -1751,17 +1768,17 @@ RESERVATION SECTION
     .mu-slider-title {
     font-size: 30px;
     line-height: 50px;
-  }
+  } */
 }
 
 @media (max-width: 480px) {
-  .mu-top-slider .mu-top-slider-single .mu-top-slider-content {
+  /* .mu-top-slider .mu-top-slider-single .mu-top-slider-content {
     top: 20%;
-  }
+  } */
 
-  .mu-top-slider .mu-top-slider-single .mu-top-slider-content p {
+  /* .mu-top-slider .mu-top-slider-single .mu-top-slider-content p {
     display: none;
-  }
+  } */
 
   .mu-reservation-content p {
     padding: 0;
@@ -1832,7 +1849,7 @@ RESERVATION SECTION
 }
 
 @media (max-width: 360px) {
-  #mu-slider
+  /* #mu-slider
     .mu-slider-area
     .mu-top-slider
     .mu-top-slider-single
@@ -1840,15 +1857,15 @@ RESERVATION SECTION
     .mu-slider-title {
     font-size: 22px;
     line-height: 30px;
-  }
+  } */
 
-  .mu-top-slider
+  /* .mu-top-slider
     .mu-top-slider-single
     .mu-top-slider-content
     .mu-slider-small-title {
     font-size: 30px;
     line-height: 25px;
-  }
+  } */
 
   #mu-restaurant-menu
     .mu-restaurant-menu-area
