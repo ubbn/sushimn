@@ -1,6 +1,11 @@
 import React from 'react'
 
 export default function Header() {
+  const [open, setOpen] = React.useState(false)
+  const onClick = () => {
+    setOpen(v => !v)
+  }
+
   return (
     <header id="mu-header">
       <nav className="navbar navbar-default mu-main-navbar" role="navigation">
@@ -8,6 +13,7 @@ export default function Header() {
           <div className="navbar-header">
             {/* <!-- FOR MOBILE VIEW COLLAPSED BUTTON --> */}
             <button
+              onClick={onClick}
               type="button"
               className="navbar-toggle collapsed"
               data-toggle="collapse"
@@ -24,35 +30,37 @@ export default function Header() {
 
             {/* <!--  Text based logo  --> */}
             <a className="navbar-brand" href="index.html">
-              Osteria<span>X</span>
+              Sushi<span>MN</span>
             </a>
 
             {/* <!--  Image based logo  -->
                   <!-- <a className="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="Logo img"></a>  --> */}
           </div>
-          <div id="navbar" className="navbar-collapse collapse">
+          <div
+            id="navbar"
+            className={`navbar-collapse collapse${open ? 'd' : ''}`}>
             <ul
               id="top-menu"
               className="nav navbar-nav navbar-right mu-main-nav">
-              <li>
-                <a href="index.html">HOME</a>
+              <li onClick={() => setOpen(false)}>
+                <a href="#home">HOME</a>
               </li>
-              <li>
+              <li onClick={() => setOpen(false)}>
                 <a href="#mu-about-us">ABOUT US</a>
               </li>
-              <li>
+              <li onClick={() => setOpen(false)}>
                 <a href="#mu-restaurant-menu">MENU</a>
               </li>
-              <li>
+              <li onClick={() => setOpen(false)}>
                 <a href="#mu-reservation">RESERVATION</a>
               </li>
-              <li>
+              <li onClick={() => setOpen(false)}>
                 <a href="#mu-gallery">GALLERY</a>
               </li>
-              <li>
+              <li onClick={() => setOpen(false)}>
                 <a href="#mu-chef">OUR CHEFS</a>
               </li>
-              <li>
+              <li onClick={() => setOpen(false)}>
                 <a href="#mu-contact">CONTACT</a>
               </li>
             </ul>
