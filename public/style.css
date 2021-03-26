@@ -1307,9 +1307,11 @@ RESERVATION SECTION
 
 .mu-chef-nav .slick-dots li {
   border-radius: 50%;
+  float: none;
+  display: inline-block;
+  width: 20px;
   width: 20px;
   display: inline-block;
-  float: none;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
@@ -1318,8 +1320,9 @@ RESERVATION SECTION
 }
 
 .mu-chef-nav .slick-dots li button {
-  display: none;
+  /* display: none; */
 }
+*/
 
 /*==================
  CONTACT SECTION

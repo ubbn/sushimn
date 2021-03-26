@@ -249,18 +249,17 @@
 }
 .slick-dots li button:hover,
 .slick-dots li button:focus {
-  color: #ffa500;
+  color: chartreuse;
   outline: none;
 }
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before {
   opacity: 1;
-  color: #ffa500;
+  color: green;
 }
 .slick-dots li button:before {
   font-family: 'slick';
   font-size: 60px;
-  color: #ffa500;
   line-height: 20px;
 
   position: absolute;
@@ -274,7 +273,6 @@
   text-align: center;
 
   opacity: 0.25;
-  color: black;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
